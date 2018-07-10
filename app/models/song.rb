@@ -14,6 +14,5 @@ class Song < ActiveRecord::Base
   def is_title_case
     if tiitle.split.any?{|w|w[0].upcase != w[0]}
       errors.add(:name, "Title must be in title case")
-    end
   end
 end
