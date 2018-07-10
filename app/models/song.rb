@@ -16,4 +16,8 @@ class Song < ActiveRecord::Base
       errors.add(:name, "Title must be in title case")
     end
   end
+
+  def make_title_case
+    self.title = self.title.titlecase
+  end
 end
